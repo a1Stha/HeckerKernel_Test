@@ -1,0 +1,8 @@
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Task</button>
+
+    <a href="{% url 'export_tasks_xlsx' %}" class="btn btn-secondary">Export Tasks</a>
+
+  </form>
